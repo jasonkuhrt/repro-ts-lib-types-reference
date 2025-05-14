@@ -18,7 +18,7 @@ The inferred type of 'it' cannot be named without a reference to '../node_module
 
 ### A Fix
 
-Author modifies `package-lib` manifest to export its types directly (no ESM namespace or EMS re-export) in an entrypoint in its manifest as follows. Project does not have to interact with this entrypoint at all. Its mere presence enables the other entrypoints of `package-lib` to work as expected.
+Author modifies `package-lib` manifest to export its types directly (no ESM namespace or EMS re-export) in an entrypoint in its manifest as follows.
 
 ```json
 {
@@ -27,6 +27,12 @@ Author modifies `package-lib` manifest to export its types directly (no ESM name
 	}
 }
 ```
+
+Yes, its mere presence enables the other entrypoints of `package-lib` to work as expected, even though other entrypoints ALSO have the SAME types, just within namspaces or re-exported (see below).
+
+- Good: Solution is on "producer side". DX. Consumer (customer, user), does not have to think about his.
+- Bad: This is very suprising for author (how are they supposed to intuit this? Is this documented? Over years have never seen this explained)
+- Unclear: In this case author has control over all types. What if author needs to re-export types from another package? Based on points below this seems likely to be a problem ☠. But I have not explicitly explored this case in this repo yet.
 
 ### Surprise 1: Cannot ESM re-export types
 
@@ -41,6 +47,8 @@ Why?!
 	}
 }
 ```
+
+
 
 ### Surprise 2: Cannot rely on types in ESM namespaces
 
