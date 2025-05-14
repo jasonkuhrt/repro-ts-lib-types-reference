@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "@tsconfig/strictest/tsconfig.json",
+    "@tsconfig/node22/tsconfig.json"
+  ],
+  "compilerOptions": {
+    // Use ESM
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "moduleDetection": "force",
+    "isolatedModules": false,
+    "isolatedDeclarations": false,
+    "outDir": "./build",
+    "rootDir": "./src",
+
+
+    // DX
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "incremental": false,
+    "noErrorTruncation": true,
+    "skipLibCheck": true,
+    "verbatimModuleSyntax": true
+  },
+  "include": ["src"],
+  "exclude": ["build"]
+}
