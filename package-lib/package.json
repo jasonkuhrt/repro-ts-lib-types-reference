@@ -2,10 +2,12 @@
   "name": "package-lib",
   "type": "module",
   "exports": {
-    ".": "./build/exports/index.js",
-    "./a": "./build/exports/a.js",
-    "./b": "./build/exports/b.js",
-    "./c": "./build/exports/c.js"
+    "./types": "./build/types-re-export.js",
+    "./ok-export-ts-namespace": "./build/exports/ok-export-ts-namespace.js",
+    "./ok-re-export-esm-namespace-and-types": "./build/exports/ok-re-export-esm-namespace-and-types.js",
+    "./ok-export-esm-namespace-and-types": "./build/exports/ok-export-esm-namespace-and-types.js",
+    "./fail-re-export-esm-namespace": "./build/exports/fail-re-export-esm-namespace.js",
+    "./fail-export-esm-namespace": "./build/exports/fail-export-esm-namespace.js"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.1",

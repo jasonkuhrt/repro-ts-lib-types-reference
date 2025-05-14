@@ -8,11 +8,8 @@
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "moduleDetection": "force",
-    "isolatedModules": false,
-    "isolatedDeclarations": false,
     "outDir": "./build",
     "rootDir": "./src",
-
 
     // DX
     "sourceMap": true,
