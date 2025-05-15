@@ -113,3 +113,4 @@ Not technical but this solution is very surprising to me and I imagine others. H
 - I wish TS would consider types in ESM namespaces to be "nameable". 
 - I wish TS would be consider types in re-exported ESM exports to be "nameable".
 - I will open a TS issue and see what it gives
+  - https://github.com/microsoft/TypeScript/issues/61700
